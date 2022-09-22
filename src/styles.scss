@@ -1,1 +1,100 @@
-/* You can add global styles to this file, and also import other style files */
+/*/* reinitialisations de marges et fade in des elements*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    animation-name: fade-in;
+    animation-duration: 3s;
+}
+
+
+/* declaration des variables de couleurs */
+
+:root {
+    --white: #ffffff;
+    --purplelight: #f2cff2;
+    --purplegrey: #9e91b7;
+    --purple: #df99f2;
+    --violet: #3d2da6;
+    --blue: #07338c;
+    --bluedark: #021740;
+}
+
+
+/* mise en place des polices */
+
+@font-face {
+    font-family: "Wakanda";
+    src: url("../src/assets/Polices/WakandaForever-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Cantarell";
+    src: url("../src/assets/Polices/cantarell-regular_[fr.allfont.net].ttf");
+}
+
+@font-face {
+    font-family: "Beyno";
+    src: url("../src/assets/Polices/BEYNO.ttf");
+}
+
+@font-face {
+    font-family: "Panthera";
+    src: url("../src/assets/Polices/panthera.otf");
+}
+
+
+/* mise en place du fade in */
+
+@keyframes fade-in {
+    0% {
+        opacity: 0%;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateX(0px);
+    }
+}
+
+
+/* mise en forme du body */
+
+body {
+    background-image: url("../src/assets/Illustrations + Logo/arrière_plan.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    color: var(--white);
+    font-family: "Cantarell", sans-serif, serif;
+    font-size: 16px;
+    font-weight: normal;
+    width: 100%;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+
+/* mise en forme de h1 et h2 */
+
+h1 {
+    font-family: "Panthera", sans-serif, serif;
+    font-size: 68px;
+    color: var(--purplegrey);
+}
+
+h2 {
+    font-family: "Beyno", sans-serif, serif;
+    font-size: 32px;
+    padding-top: 15px;
+    color: var(--purplegrey);
+}
+
+h3 {
+    font-size: 26px;
+    text-transform: uppercase;
+}

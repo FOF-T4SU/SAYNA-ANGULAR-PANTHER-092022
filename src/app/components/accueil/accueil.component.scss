@@ -1,0 +1,185 @@
+/* design de la section intro */
+
+#intro {
+    background-image: url("../../../assets/Illustrations + Logo/1_Landing_page/Pantherhome1..png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 300px;
+    height: 875px;
+}
+
+.intro {
+    width: 40%;
+    position: relative;
+    left: 150px;
+    top: 200px;
+}
+
+
+/* design de la section figure */
+
+#figure {
+    height: 450px;
+}
+
+.figure {
+    width: 90%;
+    position: relative;
+    left: 10%;
+    background-color: var(--bluedark);
+    height: 341px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.figure img {
+    margin-left: 15px;
+}
+
+.figure h2 {
+    font-size: 22px;
+    margin: 15px;
+}
+
+.figure p {
+    font-size: 10px;
+    margin: 15px;
+}
+
+#f1 img {
+    transform: scaleY(1.2);
+}
+
+#next {
+    border-radius: 75px;
+    background: var(--purplegrey);
+    text-align: center;
+    cursor: pointer;
+}
+
+#next:hover {
+    box-shadow: 2px 2px 5px var(--white);
+}
+
+#next:active {
+    transform: scale(1.1);
+}
+
+
+/* mise en forme la section story */
+
+.story {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-story div {
+    margin: 15px;
+}
+
+
+/* design de la carte */
+
+.card {
+    background-color: var(--white);
+    color: var(--bluedark);
+    text-align: center;
+    border-radius: 25px;
+    padding: 50% 5% 25% 5%;
+    position: relative;
+    top: -250px;
+}
+
+.card p {
+    width: 80%;
+    margin: 15px auto;
+}
+
+.card button {
+    background-color: var(--violet);
+    color: var(--white);
+    margin: 5px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.card span {
+    font-weight: bold;
+}
+
+img[alt="t'challa"],
+img[alt="black"] {
+    position: relative;
+    top: 15px;
+    left: 75px;
+    z-index: 100;
+}
+
+img[alt="t'challa"]:hover {
+    transform: scale(1.1);
+}
+
+
+/* design de la section contact */
+
+#contact {
+    background-image: url("../../../assets/Illustrations + Logo/1_Landing_page/Pantherhome4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    background: linear-gradient( rgba(255, 255, 255, 100%) 15%, rgba(255, 255, 255, 10%));
+    color: var(--bluedark);
+    border-radius: 150px;
+    margin-top: 20%;
+    padding: 3% 10%;
+    text-align: center;
+}
+
+.form h3 {
+    font-size: 22px;
+}
+
+.form p {
+    text-align: center;
+}
+
+.form input {
+    width: 520px;
+    height: 56px;
+    border-radius: 38px;
+    background: none;
+    color: var(--bluedark);
+    border: 1px solid var(--bluedark);
+    padding: 15px;
+    font-weight: bold;
+}
+
+.form textarea {
+    width: 520px;
+    border-radius: 38px;
+    background: none;
+    border: 1px solid var(--bluedark);
+    padding: 15px;
+    font-weight: bold;
+}
+
+.form input[type="submit"] {
+    width: 174px;
+    height: 54px;
+    border: none;
+    background: var(--white);
+}
+
+.form input[type="submit"]:hover {
+    box-shadow: 0px 0px 20px var(--bluedark);
+}

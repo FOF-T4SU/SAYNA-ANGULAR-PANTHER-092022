@@ -1,0 +1,74 @@
+/* style du footer */
+
+footer {
+    background-image: url("../../../assets/Illustrations + Logo/back_footer.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 692px;
+}
+
+footer h3 {
+    font-size: 22px;
+    letter-spacing: 6px;
+    margin: 15px;
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    padding-top: 10%;
+}
+
+.logo-foot {
+    padding-top: 5%;
+}
+
+.logo-foot a:hover img {
+    transform: scale(1.1);
+}
+
+.logo-foot img[alt="logo"] {
+    position: relative;
+    top: -200px;
+    left: -250px;
+}
+
+.nav-foot,
+.social {
+    margin-top: 15%;
+}
+
+.nav-foot ul li {
+    list-style-type: none;
+    padding-top: 15px;
+}
+
+.nav-foot ul li a {
+    text-decoration: none;
+}
+
+.nav-foot ul li a:hover {
+    text-decoration: underline;
+}
+
+.social img {
+    margin: 15px;
+}
+
+.social img:hover {
+    transform: scale(1.1);
+}
+
+.copy {
+    position: relative;
+    left: 700px;
+    top: -100px;
+    font-size: 10px;
+}
+
+.copy * {
+    display: inline;
+    margin: 5px;
+}

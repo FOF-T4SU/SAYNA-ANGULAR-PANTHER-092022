@@ -1,0 +1,38 @@
+/* design de la section forever */
+
+#forever {
+    background-image: url("../../../assets/Illustrations + Logo/2_Wakanda_page/Pantherwakanda1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: -30px;
+    right: -50px;
+    height: 105vh;
+}
+
+.forever {
+    width: 40%;
+    position: relative;
+    left: 150px;
+    top: 200px;
+}
+
+.forever h1 {
+    font-family: "Beyno", sans-serif, serif;
+}
+
+.forever h2 {
+    font-family: "Wakanda", sans-serif, serif;
+    font-size: 43px;
+}
+
+
+/* design de la section story wakanda */
+
+#story-wakanda {
+    background-image: url("../../../assets/Illustrations + Logo/2_Wakanda_page/Pantherwakanda2.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: -100px -200px;
+    margin-top: 0px;
+}

@@ -1,0 +1,67 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    padding-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-family: "Beyno", sans-serif, serif;
+    padding: 20px 10px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: var(--white);
+}
+
+nav img:hover {
+    background-color: var(--purplegrey);
+}
+
+
+/* design des icon social fixe */
+
+.fixed {
+    display: flex;
+    position: fixed;
+    top: 0%;
+    left: 3%;
+}
+
+.fixed div {
+    display: block;
+    margin: 0px 15px;
+}
+
+.fixed img {
+    display: block;
+    margin: 15px -10px;
+}
+
+.fixed img:hover {
+    background-color: var(--white);
+}
+
+.line1 {
+    border-left: 5px solid var(--purplegrey);
+    height: 400px;
+    display: inline-block;
+}
+
+.line2 {
+    border-left: 5px solid var(--purplegrey);
+    height: 250px;
+    display: inline-block;
+}

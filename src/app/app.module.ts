@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BarNavComponent } from './components/bar-nav/bar-nav.component';
+import { AccueilComponent } from './components/accueil/accueil.component';
+import { EShopComponent } from './components/e-shop/e-shop.component';
 import { WakandaComponent } from './components/wakanda/wakanda.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MonCompteComponent } from './components/mon-compte/mon-compte.component';
@@ -11,6 +14,7 @@ import { PanierComponent } from './components/panier/panier.component';
 import { InscriptionComponent } from './components/inscription/inscription.component';
 import { ConnexionComponent } from './components/connexion/connexion.component';
 import { InfoProduitComponent } from './components/info-produit/info-produit.component';
+import { EnigmeComponent } from './components/enigme/enigme.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +26,14 @@ import { InfoProduitComponent } from './components/info-produit/info-produit.com
     PanierComponent,
     InscriptionComponent,
     ConnexionComponent,
-    InfoProduitComponent
+    InfoProduitComponent,
+    AccueilComponent,
+    EShopComponent,
+    BarNavComponent,
+    EnigmeComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

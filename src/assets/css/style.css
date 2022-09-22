@@ -1,0 +1,655 @@
+/* ************* Mise en forme generale ************************ */
+
+
+/* reinitialisations de marges et fade in des elements*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    animation-name: fade-in;
+    animation-duration: 3s;
+}
+
+
+/* declaration des variables de couleurs */
+
+:root {
+    --white: #ffffff;
+    --purplelight: #f2cff2;
+    --purplegrey: #9e91b7;
+    --purple: #df99f2;
+    --violet: #3d2da6;
+    --blue: #07338c;
+    --bluedark: #021740;
+}
+
+
+/* mise en place des polices */
+
+@font-face {
+    font-family: "Wakanda";
+    src: url("../Polices/WakandaForever-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Cantarell";
+    src: url("../Polices/cantarell-regular_[fr.allfont.net].ttf");
+}
+
+@font-face {
+    font-family: "Beyno";
+    src: url("../Polices/BEYNO.ttf");
+}
+
+@font-face {
+    font-family: "Panthera";
+    src: url("../Polices/panthera.otf");
+}
+
+
+/* mise en place du fade in */
+
+@keyframes fade-in {
+    0% {
+        opacity: 0%;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateX(0px);
+    }
+}
+
+
+/* mise en forme du body */
+
+body {
+    background-image: url("../Illustrations + Logo/arrière_plan.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    color: var(--white);
+    font-family: "Cantarell", sans-serif, serif;
+    font-size: 16px;
+    font-weight: normal;
+    width: 100%;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+
+/* mise en forme du header */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    padding-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-family: "Beyno", sans-serif, serif;
+    padding: 20px 10px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: var(--white);
+}
+
+nav img:hover {
+    background-color: var(--purplegrey);
+}
+
+
+/* mise en forme de h1 et h2 */
+
+h1 {
+    font-family: "Panthera", sans-serif, serif;
+    font-size: 68px;
+    color: var(--purplegrey);
+}
+
+h2 {
+    font-family: "Beyno", sans-serif, serif;
+    font-size: 32px;
+    padding-top: 15px;
+    color: var(--purplegrey);
+}
+
+h3 {
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+
+/* style des sections */
+
+section {
+    padding: 30px 0px;
+}
+
+p {
+    margin-top: 15px;
+    text-align: justify;
+}
+
+a {
+    color: var(--white);
+}
+
+
+/* style du footer */
+
+footer {
+    background-image: url("../Illustrations + Logo/back_footer.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 692px;
+}
+
+footer h3 {
+    font-size: 22px;
+    letter-spacing: 6px;
+    margin: 15px;
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    padding-top: 10%;
+}
+
+.logo-foot {
+    padding-top: 5%;
+}
+
+.logo-foot a:hover img {
+    transform: scale(1.1);
+}
+
+.logo-foot img[alt="logo"] {
+    position: relative;
+    top: -200px;
+    left: -250px;
+}
+
+.nav-foot,
+.social {
+    margin-top: 15%;
+}
+
+.nav-foot ul li {
+    list-style-type: none;
+    padding-top: 15px;
+}
+
+.nav-foot ul li a {
+    text-decoration: none;
+}
+
+.nav-foot ul li a:hover {
+    text-decoration: underline;
+}
+
+.social img {
+    margin: 15px;
+}
+
+.social img:hover {
+    transform: scale(1.1);
+}
+
+.copy {
+    position: relative;
+    left: 700px;
+    top: -100px;
+    font-size: 10px;
+}
+
+.copy * {
+    display: inline;
+    margin: 5px;
+}
+
+
+/* affichage pour le scroll */
+
+
+/* .affiche {
+    position: relative;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.affiche.active {
+    transform: scale(1);
+    opacity: 1;
+} */
+
+
+/* ***************** Mise en forme de la page accueil ************************* */
+
+
+/* design des icon social fixe */
+
+.fixed {
+    display: flex;
+    position: fixed;
+    top: 0%;
+    left: 3%;
+}
+
+.fixed div {
+    display: block;
+    margin: 0px 15px;
+}
+
+.fixed img {
+    display: block;
+    margin: 15px -10px;
+}
+
+.fixed img:hover {
+    background-color: var(--white);
+}
+
+.line1 {
+    border-left: 5px solid var(--purplegrey);
+    height: 400px;
+    display: inline-block;
+}
+
+.line2 {
+    border-left: 5px solid var(--purplegrey);
+    height: 250px;
+    display: inline-block;
+}
+
+
+/* Design du PopUpBox */
+
+#popup {
+    display: none;
+    width: 55%;
+    text-align: center;
+    background-color: var(--purplegrey);
+    padding: 70px;
+    position: fixed;
+    left: 300px;
+}
+
+#msgpopup {
+    padding: 60px;
+    border-radius: 25px;
+    background: linear-gradient( rgba(255, 255, 255, 100%) 15%, rgba(255, 255, 255, 10%));
+    color: var(--bluedark);
+}
+
+
+/* design de la section intro */
+
+#intro {
+    background-image: url("../Illustrations + Logo/1_Landing_page/Pantherhome1..png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 300px;
+    height: 875px;
+}
+
+.intro {
+    width: 40%;
+    position: relative;
+    left: 150px;
+    top: 200px;
+}
+
+
+/* design de la section figure */
+
+#figure {
+    height: 450px;
+}
+
+.figure {
+    width: 90%;
+    position: relative;
+    left: 10%;
+    background-color: var(--bluedark);
+    height: 341px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.figure img {
+    margin-left: 15px;
+}
+
+.figure h2 {
+    font-size: 22px;
+    margin: 15px;
+}
+
+.figure p {
+    font-size: 10px;
+    margin: 15px;
+}
+
+#f1 img {
+    transform: scaleY(1.2);
+}
+
+#next {
+    border-radius: 75px;
+    background: var(--purplegrey);
+    text-align: center;
+    cursor: pointer;
+}
+
+#next:hover {
+    box-shadow: 2px 2px 5px var(--white);
+}
+
+#next:active {
+    transform: scale(1.1);
+}
+
+
+/* mise en forme la section story */
+
+.story {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-story div {
+    margin: 15px;
+}
+
+
+/* design de la carte */
+
+.card {
+    background-color: var(--white);
+    color: var(--bluedark);
+    text-align: center;
+    border-radius: 25px;
+    padding: 50% 5% 25% 5%;
+    position: relative;
+    top: -250px;
+}
+
+.card p {
+    width: 80%;
+    margin: 15px auto;
+}
+
+.card button {
+    background-color: var(--violet);
+    color: var(--white);
+    margin: 5px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.card span {
+    font-weight: bold;
+}
+
+img[alt="t'challa"],
+img[alt="black"] {
+    position: relative;
+    top: 15px;
+    left: 75px;
+    z-index: 100;
+}
+
+img[alt="t'challa"]:hover {
+    transform: scale(1.1);
+}
+
+
+/* design de la section contact */
+
+#contact {
+    background-image: url("../Illustrations + Logo/1_Landing_page/Pantherhome4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    background: linear-gradient( rgba(255, 255, 255, 100%) 15%, rgba(255, 255, 255, 10%));
+    color: var(--bluedark);
+    border-radius: 150px;
+    margin-top: 20%;
+    padding: 3% 10%;
+    text-align: center;
+}
+
+.form h3 {
+    font-size: 22px;
+}
+
+.form p {
+    text-align: center;
+}
+
+.form input {
+    width: 520px;
+    height: 56px;
+    border-radius: 38px;
+    background: none;
+    color: var(--bluedark);
+    border: 1px solid var(--bluedark);
+    padding: 15px;
+    font-weight: bold;
+}
+
+.form textarea {
+    width: 520px;
+    border-radius: 38px;
+    background: none;
+    border: 1px solid var(--bluedark);
+    padding: 15px;
+    font-weight: bold;
+}
+
+.form input[type="submit"] {
+    width: 174px;
+    height: 54px;
+    border: none;
+    background: var(--white);
+}
+
+.form input[type="submit"]:hover {
+    box-shadow: 0px 0px 20px var(--bluedark);
+}
+
+
+/* *************** Mise en forme de la page Wakanda ************************ */
+
+
+/* design de la section forever */
+
+#forever {
+    background-image: url("../Illustrations + Logo/2_Wakanda_page/Pantherwakanda1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: -30px;
+    right: -50px;
+    height: 105vh;
+}
+
+.forever {
+    width: 40%;
+    position: relative;
+    left: 150px;
+    top: 200px;
+}
+
+.forever h1 {
+    font-family: "Beyno", sans-serif, serif;
+}
+
+.forever h2 {
+    font-family: "Wakanda", sans-serif, serif;
+    font-size: 43px;
+}
+
+
+/* design de la section story wakanda */
+
+#story-wakanda {
+    background-image: url("../Illustrations + Logo/2_Wakanda_page/Pantherwakanda2.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: -100px -200px;
+    margin-top: 0px;
+}
+
+
+/* *************** Mise en forme de la page Enigme ************************ */
+
+
+/* design de la section dora */
+
+#dora {
+    background-image: url("../Illustrations + Logo/3_Page_Enigme/Pantherenigme1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: -30px;
+    left: -250px;
+    height: 170vh;
+}
+
+.dora {
+    width: 50%;
+    position: relative;
+    left: 850px;
+    top: 450px;
+}
+
+.dora h1 {
+    font-family: "Beyno", sans-serif, serif;
+}
+
+.dora p {
+    position: relative;
+    top: 150px;
+    left: 50px;
+    width: 100%;
+}
+
+.dora img[alt="circle"] {
+    position: relative;
+    top: -200px;
+    left: -50px;
+}
+
+.dora img[alt="separator"] {
+    position: relative;
+    top: -400px;
+    left: 250px;
+}
+
+
+/* design de la section defi */
+
+#defi {
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.defi {
+    position: relative;
+}
+
+.defi h2,
+.defi span {
+    font-family: "Wakanda", sans-serif, serif;
+    width: 60%;
+}
+
+.defi form {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+}
+
+.defi p {
+    padding-top: 15px;
+}
+
+.defi img {
+    position: absolute;
+    top: -100px;
+    left: -50px;
+}
+
+.defi form {
+    padding-top: 150px;
+}
+
+.defi input {
+    width: 520px;
+    height: 56px;
+    border-radius: 38px;
+    background: none;
+    color: var(--white);
+    border: 1px solid var(--white);
+    padding: 15px;
+    font-weight: bold;
+}
+
+.defi input[type="submit"] {
+    width: 174px;
+    height: 54px;
+    border: none;
+    background: var(--purplelight);
+    color: var(--bluedark);
+    position: relative;
+    left: 15%;
+    margin-top: 15px;
+}
+
+.defi input[type="submit"]:hover {
+    box-shadow: 0px 0px 20px var(--purplelight);
+}
+
+.savais-tu {
+    position: absolute;
+    top: 200px;
+    left: 450px;
+}
+
+.savais-tu p {
+    text-align: center;
+}
