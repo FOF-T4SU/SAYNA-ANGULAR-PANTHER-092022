@@ -1,1 +1,78 @@
-<p>produit works!</p>
+<main>
+    <section>
+        <div class="result">
+            <div>
+                <p>Total Article: <span>{{produits.length}}</span> Articles</p>
+            </div>
+            <div>
+                <a routerLink="/panier"><img src="../../../assets/Illustrations + Logo/icone_1.png" alt="panier"></a>
+            </div>
+        </div>
+        <div class="catalogue">
+            <div>
+                <h4>Vetement</h4>
+                <div class="categorie">
+                    <ng-container *ngFor="let produit of produits">
+                        <div>
+                            <ng-container *ngIf="produit.categorie=='Vetement'">
+                                <div>
+                                    <div class="articleCard">
+                                        <img [src]="produit.image" alt="article" routerLink="product/{{produit.id}}">
+                                        <p>{{produit.nom}}</p>
+                                        <p>{{produit.prix | currency:'EUR'}}</p>
+                                    </div>
+                                    <app-bouton text="ajouter au panier" (click)="ajouterPanier(produit)"></app-bouton>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+
+            <div>
+                <h4>Sac A Dos</h4>
+                <div class="categorie">
+                    <ng-container *ngFor="let produit of produits">
+                        <div>
+                            <ng-container *ngIf="produit.categorie=='Sac A Dos'">
+                                <div>
+                                    <div class="articleCard">
+                                        <img [src]="produit.image" alt="article" routerLink="product/{{produit.id}}">
+                                        <p>{{produit.nom}}</p>
+                                        <p>{{produit.prix | currency:'EUR'}}</p>
+                                    </div>
+                                    <app-bouton text="ajouter au panier" (click)="ajouterPanier(produit)"></app-bouton>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+            <div>
+                <h4>Accessoire</h4>
+                <div class="categorie">
+                    <ng-container *ngFor="let produit of produits">
+                        <div>
+                            <ng-container *ngIf="produit.categorie=='Accessoire'">
+                                <div>
+                                    <div class="articleCard">
+                                        <img [src]="produit.image" alt="article" routerLink="product/{{produit.id}}">
+                                        <p>{{produit.nom}}</p>
+                                        <p>{{produit.prix | currency:'EUR'}}</p>
+                                    </div>
+                                    <app-bouton text="ajouter au panier" (click)="ajouterPanier(produit)"></app-bouton>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="article">
+            <ng-container *ngFor="let produit of produits | paginate: { itemsPerPage: 6, currentPage: p }">
+                
+        <div class="pagination">
+            <pagination-controls (pageChange)="p = $event" previousLabel="Precedent" nextLabel="Suivant"></pagination-controls>
+        </div> -->
+    </section>
+</main>

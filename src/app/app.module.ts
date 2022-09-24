@@ -1,7 +1,10 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import * as fr from '@angular/common/locales/fr';
+import { registerLocaleData } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { BarNavComponent } from './components/bar-nav/bar-nav.component';
 import { AccueilComponent } from './components/accueil/accueil.component';
@@ -15,6 +18,7 @@ import { InscriptionComponent } from './components/inscription/inscription.compo
 import { ConnexionComponent } from './components/connexion/connexion.component';
 import { InfoProduitComponent } from './components/info-produit/info-produit.component';
 import { EnigmeComponent } from './components/enigme/enigme.component';
+import { BoutonComponent } from './components/bouton/bouton.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +35,14 @@ import { EnigmeComponent } from './components/enigme/enigme.component';
     EShopComponent,
     BarNavComponent,
     EnigmeComponent,
+    BoutonComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {
+    registerLocaleData(fr.default);
+  }
+}

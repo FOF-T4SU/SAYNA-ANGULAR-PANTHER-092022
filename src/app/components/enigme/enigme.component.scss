@@ -1,0 +1,115 @@
+/* design de la section dora */
+
+#dora {
+    background-image: url("../../../assets/Illustrations + Logo/3_Page_Enigme/Pantherenigme1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: -30px;
+    left: -250px;
+    height: 170vh;
+}
+
+.dora {
+    width: 50%;
+    position: relative;
+    left: 850px;
+    top: 450px;
+}
+
+.dora h1 {
+    font-family: "Beyno", sans-serif, serif;
+}
+
+.dora p {
+    position: relative;
+    top: 150px;
+    left: 50px;
+    width: 100%;
+}
+
+.dora img[alt="circle"] {
+    position: relative;
+    top: -200px;
+    left: -50px;
+}
+
+.dora img[alt="separator"] {
+    position: relative;
+    top: -400px;
+    left: 250px;
+}
+
+
+/* design de la section defi */
+
+#defi {
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.defi {
+    position: relative;
+}
+
+.defi h2,
+.defi span {
+    font-family: "Wakanda", sans-serif, serif;
+    width: 60%;
+}
+
+.defi form {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+}
+
+.defi p {
+    padding-top: 15px;
+}
+
+.defi img {
+    position: absolute;
+    top: -100px;
+    left: -50px;
+}
+
+.defi form {
+    padding-top: 150px;
+}
+
+.defi input {
+    width: 520px;
+    height: 56px;
+    border-radius: 38px;
+    background: none;
+    color: var(--white);
+    border: 1px solid var(--white);
+    padding: 15px;
+    font-weight: bold;
+}
+
+.defi input[type="submit"] {
+    width: 174px;
+    height: 54px;
+    border: none;
+    background: var(--purplelight);
+    color: var(--bluedark);
+    position: relative;
+    left: 15%;
+    margin-top: 15px;
+}
+
+.defi input[type="submit"]:hover {
+    box-shadow: 0px 0px 20px var(--purplelight);
+}
+
+.savais-tu {
+    position: absolute;
+    top: 200px;
+    left: 450px;
+}
+
+.savais-tu p {
+    text-align: center;
+}

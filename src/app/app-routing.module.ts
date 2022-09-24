@@ -4,12 +4,14 @@ import { AccueilComponent } from './components/accueil/accueil.component';
 import { ConnexionComponent } from './components/connexion/connexion.component';
 import { EShopComponent } from './components/e-shop/e-shop.component';
 import { EnigmeComponent } from './components/enigme/enigme.component';
+import { InfoProduitComponent } from './components/info-produit/info-produit.component';
 import { InscriptionComponent } from './components/inscription/inscription.component';
 import { MonCompteComponent } from './components/mon-compte/mon-compte.component';
 import { PanierComponent } from './components/panier/panier.component';
 import { WakandaComponent } from './components/wakanda/wakanda.component';
 
 const routes: Routes = [
+  { path: '', component: AccueilComponent },
   { path: 'accueil', component: AccueilComponent },
   { path: 'wakanda', component: WakandaComponent },
   { path: 'enigme', component: EnigmeComponent },
@@ -17,6 +19,7 @@ const routes: Routes = [
   { path: 'mon-compte', component: MonCompteComponent },
   { path: 'inscription', component: InscriptionComponent },
   { path: 'connexion', component: ConnexionComponent },
+  { path: 'e-shop/produit/:id', component: InfoProduitComponent },
   { path: 'panier', component: PanierComponent },
 ];
 

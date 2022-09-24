@@ -1,1 +1,41 @@
-<p>panier works!</p>
+<main>
+
+    <ng-container *ngIf="produits.length == 0">
+        <section class="container">
+            <div style="display: flex; flex-direction:column; text-align:center">
+                <h3>Ton Panier Est Vide</h3>
+                <app-bouton text="faire des achats" routerLink="/e-shop"></app-bouton>
+            </div>
+        </section>
+    </ng-container>
+
+    <ng-container *ngIf="produits.length != 0">
+        <section class="container">
+            <div style="display: flex; flex-direction:column;">
+                <ng-container *ngFor="let produit of produits">
+                    <div style="border: 2px solid white; display: flex; justify-content: space-between;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <div><img [src]="produit.image"></div>
+                            <div>
+                                <h1>{{produit.nom}}</h1>
+                                <span>Numero de produit: X00{{produit.id}}</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>{{produit.prix | currency:'EUR'}}</h3>
+                            <app-bouton (click)="retirerProduit(produit)" text="supprimer du panier"></app-bouton>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+            <div style="display:flex; justify-content:space-between;">
+                <div style="display:flex; justify-content:space-between;">
+                    <app-bouton text="passer la commande" routerLink="/commande"></app-bouton>
+                    <app-bouton text="continuer les achats" routerLink="/e-shop"></app-bouton>
+                </div>
+                <h3>Total: {{prixTotal | currency:'EUR '}}</h3>
+            </div>
+        </section>
+    </ng-container>
+
+</main>

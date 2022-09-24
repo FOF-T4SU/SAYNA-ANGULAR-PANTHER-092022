@@ -1,0 +1,14 @@
+button {
+    margin: auto;
+    padding: 15px 65px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #1c0edd, #0d1adb);
+    opacity: 60%;
+    color: white;
+    display: flex;
+    cursor: pointer;
+    &:hover {
+        opacity: 100%;
+    }
+}
