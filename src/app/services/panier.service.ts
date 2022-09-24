@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
@@ -8,16 +9,18 @@ export class PanierService {
   public listePanier: any = [];
   public listeProduit = new BehaviorSubject<any>([]);
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   prendreProduits() {
     return this.listeProduit.asObservable();
+    // return this.http.get<any>('http://localhost:3000/panier')
   }
 
   ajouterPanier(produit: any) {
     this.listePanier.push(produit);
     this.listeProduit.next(this.listePanier);
     this.prendrePrixTotal();
+    // return this.http.post('http://localhost:3000/panier', produit)
   }
 
   prendrePrixTotal(): number {

@@ -17,7 +17,7 @@
                             <ng-container *ngIf="produit.categorie=='Vetement'">
                                 <div>
                                     <div class="articleCard">
-                                        <img [src]="produit.image" alt="article" routerLink="product/{{produit.id}}">
+                                        <img [src]="produit.image" alt="article" routerLink="produit/{{produit.id}}">
                                         <p>{{produit.nom}}</p>
                                         <p>{{produit.prix | currency:'EUR'}}</p>
                                     </div>
@@ -37,7 +37,7 @@
                             <ng-container *ngIf="produit.categorie=='Sac A Dos'">
                                 <div>
                                     <div class="articleCard">
-                                        <img [src]="produit.image" alt="article" routerLink="product/{{produit.id}}">
+                                        <img [src]="produit.image" alt="article" routerLink="produit/{{produit.id}}">
                                         <p>{{produit.nom}}</p>
                                         <p>{{produit.prix | currency:'EUR'}}</p>
                                     </div>
@@ -56,7 +56,7 @@
                             <ng-container *ngIf="produit.categorie=='Accessoire'">
                                 <div>
                                     <div class="articleCard">
-                                        <img [src]="produit.image" alt="article" routerLink="product/{{produit.id}}">
+                                        <img [src]="produit.image" alt="article" routerLink="produit/{{produit.id}}">
                                         <p>{{produit.nom}}</p>
                                         <p>{{produit.prix | currency:'EUR'}}</p>
                                     </div>
@@ -68,11 +68,5 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="article">
-            <ng-container *ngFor="let produit of produits | paginate: { itemsPerPage: 6, currentPage: p }">
-                
-        <div class="pagination">
-            <pagination-controls (pageChange)="p = $event" previousLabel="Precedent" nextLabel="Suivant"></pagination-controls>
-        </div> -->
     </section>
 </main>

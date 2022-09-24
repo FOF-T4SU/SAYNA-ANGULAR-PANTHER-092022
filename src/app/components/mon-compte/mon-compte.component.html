@@ -12,4 +12,47 @@
             <a routerLink="accueil"><img src="../../../assets/Illustrations + Logo/icon_twitter.png" alt="icontw"></a>
         </div>
     </div>
+
+    <!-- HEROS -->
+    <section id="hero_e-shop">
+        <div class="container">
+            <h2>Guerrier Wakanda</h2>
+        </div>
+    </section>
+
+    <section class="container details">
+        <div>
+            <a routerLink="" style="text-decoration: underline;">Mes informations</a>
+            <a routerLink="">Historique des commandes</a>
+            <a routerLink="">Mes avis</a>
+            <a routerLink="">Mes favoris</a>
+            <button (click)="deconnexion()">Deconnexion</button>
+        </div>
+        <div>
+            <div style="border-left: 1px solid var(--white);padding: 25px;">
+                <h3>Informations Personnelles</h3>
+                <hr>
+                <p>nom :</p>
+                <p>prenom : </p>
+                <p>mot de passe : </p>
+                <p>email : </p>
+                <p>Numero de telephone : </p>
+                <p>Adresse de livraison : </p>
+                <p>Adresse de facturation : </p>
+                <button>Modifier</button>
+            </div>
+            <br>
+            <div style="border-left: 1px solid var(--white);padding: 25px;">
+                <h3>Newsletter</h3>
+                <hr>
+                <p>Abonnez vous a la Newsletter! ne rater pas nos offres exceptionnels sur votre article prefere!</p>
+                <form>
+                    <input type="radio" name="choix" id="o" checked> <label for="o">OUI</label><br>
+                    <input type="radio" name="choix" id="n"> <label for="n">NON</label><br>
+                    <button type="submit">Enregistrer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
 </main>

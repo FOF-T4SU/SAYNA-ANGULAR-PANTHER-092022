@@ -1,0 +1,61 @@
+#hero_e-shop {
+    background-image: url("../../../assets/Illustrations + Logo/bg_1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-size: cover;
+    position: relative;
+    min-height: 700px;
+    .container {
+        width: 35%;
+        margin: auto;
+        text-align: center;
+        position: relative;
+        top: 200px;
+    }
+    h2 {
+        width: 750px;
+        text-transform: uppercase;
+        position: relative;
+        left: -50px;
+        font-size: 60px;
+    }
+    img {
+        position: relative;
+        top: 400px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--purplelight);
+        border-radius: 20px;
+        border: none;
+        padding: 45px;
+        input {
+            background: none;
+            display: block;
+            border: 1px solid var(--white);
+            padding: 15px;
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            color: var(--bluedark);
+        }
+        span {
+            display: none;
+        }
+        button {
+            width: 174px;
+            height: 54px;
+            border: none;
+            background: var(--bluedark);
+            color: var(--purplelight);
+            margin-top: 15px;
+            &:hover {
+                box-shadow: 0px 0px 20px var(--bluedark);
+            }
+        }
+    }
+}

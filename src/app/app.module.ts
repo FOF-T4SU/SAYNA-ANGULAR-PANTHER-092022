@@ -4,6 +4,7 @@ import * as fr from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BarNavComponent } from './components/bar-nav/bar-nav.component';
@@ -19,6 +20,7 @@ import { ConnexionComponent } from './components/connexion/connexion.component';
 import { InfoProduitComponent } from './components/info-produit/info-produit.component';
 import { EnigmeComponent } from './components/enigme/enigme.component';
 import { BoutonComponent } from './components/bouton/bouton.component';
+import { CommandeComponent } from './components/commande/commande.component';
 
 @NgModule({
   declarations: [
@@ -36,8 +38,15 @@ import { BoutonComponent } from './components/bouton/bouton.component';
     BarNavComponent,
     EnigmeComponent,
     BoutonComponent,
+    CommandeComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
   bootstrap: [AppComponent],
 })

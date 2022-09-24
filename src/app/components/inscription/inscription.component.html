@@ -1,1 +1,23 @@
-<p>inscription works!</p>
+<main>
+    <!-- HEROS -->
+    <section id="hero_e-shop">
+        <div class="container">
+            <h3>inscription</h3>
+            <p>Vous avez un compte? <a routerLink="/connexion">connecter-vous</a></p>
+            <form [formGroup]="formInscription" (ngSubmit)="inscription()">
+                <label>Nom</label><input type="text" placeholder="Entrer votre nom" id="nom" formControlName="nom" [ngClass]="{'is-invalid':formInscription.get('nom')?.touched && formInscription.get('nom')?.invalid}">
+                <br><span class="invalid-feedback">Veuillez remplir ce champ</span>
+                <br><label>Prenom</label><input type="text" placeholder="Entrer votre prenom" id="prenom" formControlName="prenom" [ngClass]="{'is-invalid':formInscription.get('prenom')?.touched && formInscription.get('prenom')?.invalid}">
+                <br><span class="invalid-feedback">Veuillez remplir ce champ</span>
+                <br><label>Identiiant</label><input type="email" placeholder="Entrer votre e-mail" id="email" formControlName="email" [ngClass]="{'is-invalid':formInscription.get('email')?.touched && formInscription.get('email')?.invalid}">
+                <br><span class="invalid-feedback">Veuillez remplir ce champ</span>
+                <br><label>Mot de passe</label><input type="password" placeholder="Entrer un mot de passe" id="password" formControlName="password" [ngClass]="{'is-invalid':formInscription.get('password')?.touched && formInscription.get('password')?.invalid}">
+                <br><span class="invalid-feedback">Veuillez remplir ce champ</span>
+                <br><label>Confirmer le mot de passe</label><input type="password" placeholder="Confirmer le mot de passe" id="confirmPassword" formControlName="confirmPassword" [ngClass]="{'is-invalid':formInscription.get('confirmPassword')?.touched && formInscription.get('confirmPassword')?.invalid}">
+                <br><span class="invalid-feedback">Mot de passe non coforme</span>
+                <br><button type="submit">VALIDER</button>
+                <!-- <span style="display: none;" *ngIf="formInscription.controls['nom'].dirty && formInscription.controls['prenom'].dirty && formInscription.controls['email'].dirty && formInscription.controls['password'].dirty" style="display: block;">* Tous les champs du ormulaire sont obligatoires</span> -->
+            </form>
+        </div>
+    </section>
+</main>

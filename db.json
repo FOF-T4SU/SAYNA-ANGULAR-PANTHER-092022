@@ -140,7 +140,50 @@
         "body": "some comment",
         "postId": 1
     }],
-    "profile": {
-        "name": "typicode"
-    }
+    "utilisateurInscrit": [{
+            "nom": "azert",
+            "prenom": "azert",
+            "email": "admin@admin.com",
+            "password": "azerty",
+            "id": 1
+        },
+        {
+            "nom": "admin",
+            "prenom": "admin",
+            "email": "admin@admin.com",
+            "password": "admin",
+            "id": 2
+        },
+        {
+            "nom": "",
+            "prenom": "",
+            "email": "",
+            "password": "",
+            "id": 3
+        },
+        {
+            "nom": "",
+            "prenom": "",
+            "email": "",
+            "password": "",
+            "id": 4
+        },
+        {
+            "nom": "",
+            "prenom": "",
+            "email": "",
+            "password": "azer",
+            "confirmPassword": "azertyuui",
+            "id": 5
+        },
+        {
+            "nom": "",
+            "prenom": "",
+            "email": "",
+            "password": "",
+            "confirmPassword": "",
+            "id": 6
+        }
+    ],
+    "panier": []
 }

@@ -1,1 +1,66 @@
-<p>info-produit works!</p>
+<main class="container">
+    <div class="flex">
+        <div>
+            <ul>
+                <li><a routerLink="/e-shop">E-shop</a></li>
+                <li>/</li>
+                <li><a routerLink="/panier">Panier</a></li>
+            </ul>
+        </div>
+        <div>
+            <img src="../../../assets/Illustrations + Logo/icone_1.png" alt="panier">
+        </div>
+    </div>
+    <section class="flex">
+        <div width="40%">
+            <img [src]="produit.image" alt="produit">
+        </div>
+        <div>
+            <div>
+                <h1>{{produit.nom}}</h1>
+            </div>
+            <hr>
+            <div class="flex">
+                <div>
+                    <h2>{{produit.prix | currency:'EUR'}}</h2>
+                </div>
+                <div>
+                    <ng-container *ngIf="produit.nombre==0">Stock Epuise</ng-container>
+                    <ng-container *ngIf="produit.nombre!=0">En Stock</ng-container>
+                    <select>
+                        <option>Taille M</option>
+                        <option>Taille L</option>
+                        <option>Taille XL</option>
+                        <option>Taille XXL</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <app-bouton text="aouter au panier" (click)="ajouterPanier(produit)"></app-bouton>
+            </div>
+            <hr>
+            <div>
+                <p>{{produit.description}}</p>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <h3>Caracteristiques</h3>
+        <h4>Materiaux</h4>
+        <h4>Couleurs</h4>
+        <h4>Poids</h4>
+        <h4>Capacites</h4>
+    </section>
+    <hr>
+    <section>
+        <h3>Livraison</h3>
+        <h4>Livraison a domicile</h4>
+        <h4>Retrait en point relais</h4>
+        <h4>Delais de livraison 2 - 4 jours</h4>
+    </section>
+    <hr>
+    <section>
+        <h3>Commentaires</h3>
+    </section>
+</main>

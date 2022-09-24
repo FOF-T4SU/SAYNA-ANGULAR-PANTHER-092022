@@ -1,1 +1,13 @@
-<p>connexion works!</p>
+<main>
+    <!-- HEROS -->
+    <section id="hero_e-shop">
+        <div class="container">
+            <form [formGroup]="formConnexion" (ngSubmit)="connexion()">
+                <label>Identiiant</label><input type="email" placeholder="Entrer votre e-mail" id="email" formControlName="email">
+                <label>Mot de passe</label><input type="password" placeholder="Entrer un mot de passe" id="password" formControlName="password">
+                <button type="submit">VALIDER</button>
+            </form>
+        </div>
+    </section>
+
+</main>
