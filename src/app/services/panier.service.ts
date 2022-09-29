@@ -13,14 +13,14 @@ export class PanierService {
 
   prendreProduits() {
     return this.listeProduit.asObservable();
-    // return this.http.get<any>('http://localhost:3000/panier')
+    // return this.http.get<any>('https://sayna-black-panther-api.herokuapp.com/panier')
   }
 
   ajouterPanier(produit: any) {
     this.listePanier.push(produit);
     this.listeProduit.next(this.listePanier);
     this.prendrePrixTotal();
-    // return this.http.post('http://localhost:3000/panier', produit)
+    // return this.http.post('https://sayna-black-panther-api.herokuapp.com/panier', produit)
   }
 
   prendrePrixTotal(): number {

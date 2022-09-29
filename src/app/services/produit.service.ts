@@ -9,7 +9,7 @@ export class ProduitService {
   constructor(private http: HttpClient) {}
 
   prendreProduits() {
-    return this.http.get<any>('http://localhost:3000/produits').pipe(
+    return this.http.get<any>('https://sayna-black-panther-api.herokuapp.com/produits').pipe(
       map((reponse: any) => {
         return reponse;
       })
@@ -17,7 +17,7 @@ export class ProduitService {
   }
 
   prendreProduitId(id: number) {
-    return this.http.get<any>('http://localhost:3000/produits/' + id).pipe(
+    return this.http.get<any>('https://sayna-black-panther-api.herokuapp.com/produits' + id).pipe(
       map((reponse: any) => {
         return reponse;
       })

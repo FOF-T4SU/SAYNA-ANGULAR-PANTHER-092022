@@ -48,7 +48,7 @@ export class InscriptionComponent implements OnInit {
   inscription() {
     this.http
       .post<any>(
-        'http://localhost:3000/utilisateurInscrit',
+        'https://sayna-black-panther-api.herokuapp.com/utilisateursInscrits',
         this.formInscription.value
       )
       .subscribe((reponse) => {
